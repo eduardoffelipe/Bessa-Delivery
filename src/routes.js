@@ -4,6 +4,7 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Stores from "./pages/Stores";
+import OpenAndCloseStores from "./pages/OpenAndCloseStores";
 
 const Stack = createStackNavigator();
 
@@ -16,6 +17,7 @@ const Routes = () => {
       <Stack.Screen name="Login" component={Login} />
       <Stack.Screen name="Register" component={Register} />
       <Stack.Screen name="Stores" component={Stores} />
+      <Stack.Screen name="OpenAndCloseStores" component={OpenAndCloseStores} />
     </Stack.Navigator>
   );
 };
