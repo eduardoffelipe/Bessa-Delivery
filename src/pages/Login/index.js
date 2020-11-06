@@ -1,28 +1,38 @@
-import React from "react";
-import { View } from "react-native";
+import React, { useState } from "react";
+import { Text, View } from "react-native";
 import styles from "./styles";
 
-import TextInput from "../../Components/Input";
+import Input from "../../Components/Input";
 import Button from "../../Components/Button";
 
 const Login = () => {
-  const [email, onChangeEmail] = React.useState("");
-  const [Senha, onChangeSenha] = React.useState("");
+  const [email, onChangeEmail] = useState("");
+  const [pass, onChangeSenha] = useState("");
 
   return (
-    <View style={styles.Container}>
-      <TextInput
+    <View style={styles.container}>
+      <Input
         onChangeText={(text) => onChangeEmail(text)}
-        placeholder="Email"
         value={email}
         keyboardType="email-address"
         textContentType="emailAddress"
         secureTextEntry={false}
         label="Email:"
       />
-
-      <Button title="Hiago" tam="small" />
+      <Input
+        onChangeText={(text) => onChangeSenha(text)}
+        value={pass}
+        secureTextEntry
+        label="Senha:"
+      />
+      <View style={styles.viewText}>
+        <Text style={styles.esqueceu}>Esqueceu a senha</Text>
+        <Text style={styles.criar}>Criar uma conta</Text>
+      </View>
+      <View style={styles.viewButton}>
+        <Button title="Entrar" tam="small" />
+      </View>
     </View>
   );
-}
+};
 export default Login;
