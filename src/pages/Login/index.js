@@ -10,7 +10,7 @@ const Login = () => {
   const [Senha, onChangeSenha] = React.useState("");
 
   return (
-    <View style={styles.Container}>
+    <View style={styles.container}>
       <TextInput
         onChangeText={(text) => onChangeEmail(text)}
         placeholder="Email"

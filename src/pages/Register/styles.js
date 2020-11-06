@@ -5,6 +5,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "flex-start",
     alignItems: "center",
+    backgroundColor: "#fff",
   },
   scrollView: {
     paddingTop: 40,
@@ -22,13 +23,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     margin: 10,
   },
-  markedText:{
-      color:'#f54c4c',
-      fontWeight: 'bold'
+  markedText: {
+    color: "#f54c4c",
+    fontWeight: "bold",
   },
-  baseText:{
-      textAlign:'center',
-  }
+  baseText: {
+    textAlign: "center",
+  },
 });
 
 export default styles;
