@@ -1,12 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { Button, StyleSheet, Text, TextInput, View } from 'react-native';
-import Rotas from './routes/routes.js';
+import React from "react";
+import { StyleSheet, Text, TextInput, View } from "react-native";
 import "react-native-gesture-handler";
 
+import Button from "./src/Components/Button";
 
-const App = () => (
-  <Rotas/>
-)
+const styles = StyleSheet.create({
+  Container: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+});
 
-export default App
+const App = () => {
+  return (
+    <View style={styles.Container}>
+      <Button title='Hiago' color='green' TAM='small'/>
+    </View>
+  );
+};
+
+export default App;
