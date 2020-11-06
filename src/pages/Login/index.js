@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Text, View } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
 import styles from "./styles";
 
 import Input from "../../Components/Input";
 import Button from "../../Components/Button";
 
 const Login = () => {
+  const navigation = useNavigation();
+
   const [email, onChangeEmail] = useState("");
   const [pass, onChangeSenha] = useState("");
 
@@ -30,7 +34,11 @@ const Login = () => {
         <Text style={styles.criar}>Criar uma conta</Text>
       </View>
       <View style={styles.viewButton}>
-        <Button title="Entrar" tam="small" />
+        <Button
+          title="Entrar"
+          tam="small"
+          action={() => navigation.navigate("OpenAndCloseStores")}
+        />
       </View>
     </View>
   );
