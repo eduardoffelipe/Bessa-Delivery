@@ -1,19 +1,15 @@
-// import React from 'react';
-// import { NavigationContainer } from '@react-navigation/native';
-// import { createStackNavigator } from '@react-navigation/stack';
+import React from "react";
+import { createStackNavigator } from "@react-navigation/stack";
 
+import Login from "./pages/Login";
 
-// import Login from '../Screen/Login'
+const Stack = createStackNavigator();
 
-
-// const AppStack = createStackNavigator();
-
-// const Routes = () => {
-// //   <NavigationContainer>
-// //     <AppStack.Navigator initialRouteName="Login">
-// //       <AppStack.Screen name="Login" component={Login} />
-// //     </AppStack.Navigator>
-// //   </NavigationContainer>
-// // }
-
-// export default Routes;
+const Routes = () => {
+  return (
+    <Stack.Navigator initialRouteName="Login">
+      <Stack.Screen name="Login" component={Login} />
+    </Stack.Navigator>
+  );
+};
+export default Routes
