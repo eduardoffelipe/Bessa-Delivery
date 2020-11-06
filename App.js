@@ -1,23 +1,15 @@
-import React, { useState } from "react";
-import { StyleSheet, View } from "react-native";
+import React from "react";
+import { NavigationContainer } from "@react-navigation/native";
 import "react-native-gesture-handler";
 
-import Register from "./src/pages/Register";
+import Routes from "./src/routes";
 
 const App = () => {
   return (
-    <View style={styles.Container}>
-      <Register />
-    </View>
+    <NavigationContainer>
+      <Routes />
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  Container: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-  },
-});
 
 export default App;
