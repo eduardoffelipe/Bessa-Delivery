@@ -9,6 +9,7 @@ const styles = StyleSheet.create({
     borderRadius: 5,
     justifyContent: "center",
     alignItems: "center",
+    marginBottom: 15
   },
   Text: {
     color: "#fff",
